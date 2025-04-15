@@ -1,0 +1,3 @@
+/home/hjjjkj/Rafail325/workspace/projects/lab03hw/lab03/solver_application/build/CMakeFiles/solver.dir
+/home/hjjjkj/Rafail325/workspace/projects/lab03hw/lab03/solver_application/build/CMakeFiles/edit_cache.dir
+/home/hjjjkj/Rafail325/workspace/projects/lab03hw/lab03/solver_application/build/CMakeFiles/rebuild_cache.dir

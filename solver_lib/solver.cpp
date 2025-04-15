@@ -1,3 +1,4 @@
+#include <cmath>
 #include "solver.h"
 
 #include <stdexcept>
