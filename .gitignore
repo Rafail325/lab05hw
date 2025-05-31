@@ -1,13 +1,21 @@
+# CMake build directory
 build/
-*.a
+
+# Dependency directories (e.g., from FetchContent)
+_deps/
+
+# Executables and object files
 *.o
-*.so
-*.dll
 *.exe
-*.out
-*.log
-*.cache
-CMakeFiles/
-cmake_install.cmake
+
+# Test results
+Testing/
+
+# IDE/Editor specific files (optional - uncomment if needed)
+#.vscode/
+#.idea/
+
+# CMake files generated in the source directory (less common, but can happen)
 CMakeCache.txt
-Makefile
+CMakeFiles/
+cmake_install.cmake 
