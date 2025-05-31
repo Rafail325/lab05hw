@@ -1,9 +1,0 @@
-language: cpp  # Язык проекта — C++
-
-compiler:
-  - gcc        # Используем компилятор GCC
-
-script:        # Команды, которые Travis выполнит при сборке
-  - cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install -DBUILD_TESTS=ON
-  - cmake --build _build
-  - cmake --build _build --target test -- ARGS=--verbose
