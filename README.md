@@ -1,3 +1,3 @@
-[![Coverage Status](https://coveralls.io/repos/github/badamPss/lab05hw/badge.svg?branch=master&service=github)](https://coveralls.io/github/badamPss/lab05hw?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/Rafail325/lab05hw/badge.svg?branch=main&service=github)](https://coveralls.io/github/Rafail325/lab05hw?branch=main)
 
 ## Laboratory work V
