@@ -32,6 +32,3 @@ void Account::AddTransaction(std::shared_ptr<Transaction> transaction) {
 const std::vector<std::shared_ptr<Transaction>>& Account::GetTransactionHistory() const {
     return transactions_;
 }
-
-
-/22
