@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake g++ lcov
+
+    - name: Configure
+      run: |
+        mkdir build
+        cd build
+        cmake -DCMAKE_BUILD_TYPE=Coverage ../banking
+
+    - name: Build
+      run: |
+        cd build
+        make
+
+    - name: Test
+      run: |
+        cd build
+        make test
+
+    - name: Generate coverage report
+      run: |
+        cd build
+        lcov --capture --directory . --output-file coverage.info --ignore-errors mismatch,unsupported,format,gcov,unused
+        lcov --extract coverage.info "*/banking/Account.cpp" "*/banking/Transaction.cpp" "*/banking/Transaction.h" "*/banking/Account.h" --output-file coverage.info
+        lcov --list coverage.info
+
+    - name: Upload coverage to Coveralls
+      uses: coverallsapp/github-action@v2
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        path-to-lcov: build/coverage.info 
